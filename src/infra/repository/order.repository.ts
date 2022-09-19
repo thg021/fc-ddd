@@ -59,7 +59,7 @@ export default class OrderRepository implements OrderRepositoryInterface{
         rejectOnEmpty: true,
       });
     } catch (error) {
-      throw new Error("Customer not found");
+      throw new Error("Order not found");
     }
 
     
