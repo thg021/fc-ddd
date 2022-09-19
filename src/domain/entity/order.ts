@@ -25,6 +25,11 @@ export class Order {
     return this._items;
   }
 
+  addNewItem(item: OrderItem){
+    this._items.push(item)
+    this._total = this.total()
+  }
+
   validate(): boolean {
     if (this._id.length === 0) {
       throw new Error("Id is required");
@@ -44,7 +49,7 @@ export class Order {
   }
 
   total(): number {
-    return this._items.reduce((acc, item) => acc + item.price, 0);
+    return this._items.reduce((acc, item) => acc + item.totalItem(), 0);
   }
 }
 
