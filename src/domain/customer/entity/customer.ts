@@ -8,6 +8,7 @@ export class Customer {
   private _active: boolean = false
   private _rewardPoints: number = 0
 
+
   constructor(id: string,  name: string ){
     this._id = id;
     this._name = name
@@ -73,4 +74,5 @@ export class Customer {
   addRewardPoints(point: number){
     this._rewardPoints += point
   }
+
 }
